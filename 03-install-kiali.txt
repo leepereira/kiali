@@ -1,0 +1,17 @@
+helm repo add kiali https://kiali.org/helm-charts
+
+helm install \
+    --set cr.create=true \
+    --set cr.namespace=istio-system \
+    --namespace kiali-operator \
+    --create-namespace \
+    kiali-operator \
+    kiali/kiali-operator
+
+The Kiali Operator [v1.55.0] has been installed in namespace [kiali-operator]. It will be ready soon.
+
+You have elected to install a Kiali CR in the namespace [istio-system]. You should be able to access Kiali soon.
+To uninstall the Kiali Operator, remember to delete the Kiali CR first before uninstalling the operator to give the operator a chance to uninstall and remove all the Kiali Server resources.
+
+
+

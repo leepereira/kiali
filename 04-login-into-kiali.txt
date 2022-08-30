@@ -1,0 +1,6 @@
+Use this token to login into the kiali instance
+kubectl get secret -n istio-system $(kubectl get sa kiali-service-account -n istio-system -o "jsonpath={.secrets[0].name}") -o jsonpath={.data.token} | base64 -d
+
+
+
+kiali-service-account in istio-system has a secret  : kiali-service-account-token-t2tbw
